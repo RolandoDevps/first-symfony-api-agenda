@@ -7,7 +7,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Exception\NotEncodableValueException;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -15,18 +14,16 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class ContactConroller extends AbstractController
 {
-    /**
-     * @Route("/contact/list", name="app_contact_list", methods={"GET"})
-     */
     public function listAction(EntityManagerInterface $em): Response
     {
         $contacts = $em->getRepository(Contact::class)
                     ->findAll();
-        $response = $this->json($contacts, 200, [], ['groups' => 'post:read']);
+                    
+        $response = $this->json($contacts, 200, ['groups' => 'post_cont:read']);
         return $response;
     }
 
-    protected function random_3($nbr) {
+    public static function random_3($nbr) {
         $chn = '';
         for ($i=1;$i<=$nbr;$i++)
             $chn .= chr(floor(rand(0, 25)+97));
@@ -43,7 +40,7 @@ class ContactConroller extends AbstractController
         $jsonRecu = $request->getContent();
         try{
             $post = $serializer->deserialize($jsonRecu, Contact::class, 'json');
-            $post->setPublicId($this->random_3(20));
+            $post->setPublicId(ContactConroller::random_3(20));
             $post->setDateCreation(new \DateTime());
             $post->setHeureCreation(new \DateTime());
 
@@ -80,18 +77,19 @@ class ContactConroller extends AbstractController
         $contactToGet = $em->getRepository(Contact::class)
                     ->findOneBy(['public_id' => $public_id]);
 
-        try{
-            if($contactToGet){
-                $response = $this->json($contactToGet, 200, [], ['groups' => 'post:read']);
-                return $response;
-            }
+        if($contactToGet){
+            $response = $this->json($contactToGet, 200, [], ['groups' => 'post:read']);
+            return $response;
         }
-        catch(NotFoundHttpException $e){
-            return $this->json([
-                'status' => 404,
-                'message' => $e->getMessage()
-            ], 404);
-        }
+        throw $this->createNotFoundException(
+            'No contact found for public_id '.$public_id
+        );
+        // catch(NotFoundHttpException $e){
+        //     return $this->json([
+        //         'status' => 404,
+        //         'message' => $e->getMessage()
+        //     ], 404);
+        // }
     }
 
     /**

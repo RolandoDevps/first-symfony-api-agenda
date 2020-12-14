@@ -18,19 +18,19 @@ class Contact
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      */
     private $public_id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      * @Assert\NotBlank
      * @Assert\Length(min=5)
      */
@@ -38,7 +38,7 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      * @Assert\NotBlank
      * @Assert\Length(min=5)
      */
@@ -46,7 +46,7 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      * @Assert\NotBlank
      * @Assert\Length(min=5)
      */
@@ -54,7 +54,7 @@ class Contact
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      * @Assert\NotBlank
      * @Assert\Length(min=9,max=9)
      */
@@ -62,13 +62,12 @@ class Contact
 
     /**
      * @ORM\Column(type="date")
-     * @Groups("post:read")
+     * @Groups("post_cont:read")
      */
     private $date_creation;
 
     /**
      * @ORM\Column(type="time")
-     * @Groups("post:read")
      */
     private $heure_creation;
 
@@ -79,6 +78,7 @@ class Contact
 
     /**
      * @ORM\ManyToMany(targetEntity=Evenement::class)
+     * @Groups("post_cont:read")
      */
     private $evenements;
 

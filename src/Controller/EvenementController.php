@@ -21,7 +21,7 @@ class EvenementController extends AbstractController
         $evenements = $em->getRepository(Evenement::class)
                         ->findAll();
                         
-        $response = $this->json($evenements, 200, ['groups' => 'post:read']);
+        $response = $this->json($evenements, 200, ['groups' => 'post_event:read']);
         return $response;
     }
 

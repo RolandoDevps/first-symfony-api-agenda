@@ -15,49 +15,49 @@ class Evenement
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     public $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $titre;
 
     /**
      * @ORM\Column(type="date")
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $date;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $lieu;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $description;
 
     /**
      * @ORM\Column(type="date")
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $date_creation;
 
     /**
      * @ORM\Column(type="time")
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $heure_creation;
 
     /**
      * @ORM\Column(type="boolean")
-     * @Groups("post:read")
+     * @Groups("post_event:read")
      */
     private $is_deleted;
 
