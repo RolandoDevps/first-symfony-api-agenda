@@ -68,6 +68,7 @@ class ContactConroller extends AbstractController
             ], 400);
         }
     }
+    
 
      /**
      * @Route("contact/get/{public_id}", name="app_contact_get", methods={"GET"})
