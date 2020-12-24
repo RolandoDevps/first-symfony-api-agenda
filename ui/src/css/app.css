@@ -528,6 +528,12 @@ body{
 }
 
 /***/
+@media (min-width: 1200px){
+    .container {
+        max-width: 1265px !important;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .wrap-title-bloc {
         width: 90%;

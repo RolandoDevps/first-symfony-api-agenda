@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../images/logo.svg";
+import logo from "../images/logo.png";
 import menu from "../images/menu.svg";
 import search from "../images/search.svg";
 import login from "../images/avatar.svg";
@@ -11,12 +11,12 @@ const Header = (props) => {
         <div className="wrapper-header" id="wrapper_header">
             <div className="container">
                 <div className="row wrap-header">
-                <div className="col-1 logo-header">
+                <div className="col-2 logo-header">
                     <a className="wrap-logo" href="./index.html">
                         <img src={logo} alt="Logo" />
                     </a>
                 </div>
-                <div className="col-7 header-center toggle-display-none menu-mobile-display-none">
+                <div className="col-6 header-center toggle-display-none menu-mobile-display-none">
                     <ul className="nav nav-pills nav-fill">
                     <li className="nav-item">
                         <a className="nav-link" href>
@@ -45,7 +45,7 @@ const Header = (props) => {
                     </li>
                     </ul>
                 </div>
-                <div className="col-7 toggle-display-none space-between" style={{display: 'none'}} />
+                <div className="col-6 toggle-display-none space-between" style={{display: 'none'}} />
                 <div className="col-4 header-right toggle-display-none">
                     <div className="menu-icon toggle-menu-nav-side-show" id="openNav">
                     <span className="toggle-menu-nav" id="toggle-menu">
@@ -73,7 +73,7 @@ const Header = (props) => {
                     </span>
                     </div>
                 </div>
-                <div className="col-11 header-search toggle-display-flex" style={{display: 'none'}}>
+                <div className="col-10 header-search toggle-display-flex" style={{display: 'none'}}>
                     <div className="search-form">
                     <form action>
                         <button type="submit"> 
