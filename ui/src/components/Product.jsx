@@ -10,7 +10,7 @@ const Product = () => {
                     <div className="scale-spinner-circle circle-1" />
                     <div className="scale-spinner-circle circle-2" />
                 </div>
-                <div className="container bloc-product">
+                <div className="container bloc-products">
                     <div className="row">
                         <div className="wrap-title-bloc">
                             <h3>Featured Products</h3>

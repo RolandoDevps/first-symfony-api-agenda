@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../images/logo.png"
 
 const Footer = (props) => {
     return ( 
@@ -7,7 +8,7 @@ const Footer = (props) => {
                 <div className="row footer-bloc">
                 <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xlg-3" data-aos="fade-up" data-aos-duration={3500}>
                     <div className="footer-widget logo-widget">
-                    <div className="title" id="open-menu-1" onclick="var idelt=this.id; openFooterMenu(idelt)"><h2><a href="index.php">MK BID</a></h2></div>
+                    <div className="title" id="open-menu-1" onclick="var idelt=this.id; openFooterMenu(idelt)"><h2><a href="index.php" className="footer-logo"><img src={logo} alt=""/></a></h2></div>
                     {/* <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis pariatur laudantium facilis non aspernatur! Inventore, ullam placeat similique in, dolor, molestiae molestias unde nulla magnam quae et cum quod.</p></div> */}
                     <ul className="footer-menu-item" data-menu="open-menu-1">
                         <li><a href="contact.html">Accueil</a></li>
@@ -55,8 +56,8 @@ const Footer = (props) => {
                 <div className="bottom-footer">
                 <div className="row">
                     <div className="col footer-logo">
-                    <a className="wrap-logo" href="./index.html">
-                        <img src="images/logo.svg" alt="SAP" />
+                    <a className="footer-logo" href="./index.html">
+                        <img src={logo} alt="SAP" />
                     </a>
                     </div>
                     <div className="col footer-links">
