@@ -188,7 +188,7 @@
 
 /**sidebar**/
 .wrap-side-bar {
-    display: none;
+    /* display: none; */
     position: fixed;
     background: rgba(0,0,0,0.4);
     height: 100%;
@@ -212,9 +212,10 @@
   
   .sidebar a {
     padding: 0 !important;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    color: #818181 !important;
+    cursor: pointer !important;
     display: block;
     position: relative;
     transition: 0.3s;
@@ -223,7 +224,7 @@
   }
   
   .sidebar a:hover {
-    color: #f1f1f1;
+    color: #f1f1f1 !important;
   }
   
   ul.sidebar-nav {
@@ -232,7 +233,14 @@
     padding: 0;
 }
 
-.sidebar a:after {content: '\f105';font-family: 'FontAwesome';position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+.sidebar a:after {
+    content: '\f105';
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 ul.sidebar-nav li {
     padding: 8px 28px;
@@ -254,6 +262,12 @@ ul.sidebar-nav li {
     display: none ;
 }
 
+@media (min-width: 996px) {
+    .wrap-side-bar{
+        display: none;
+    }
+  }
+
   @media (max-width: 995px) {
     .essai.toggle-menu-nav-side-hide, .header-center {
         display: none ;
@@ -272,4 +286,3 @@ ul.sidebar-nav li {
         padding-left: 0;
     }
   }
-

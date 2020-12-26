@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import "./css/header.css"
 import "./css/footer.css"
 import "./css/app.css"
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Banniere from './components/Banniere';
 import Portfolio from './components/Portfolio';
 import Product from './components/Product';
@@ -14,7 +14,7 @@ import like from "./images/like.svg"
 
 const App = (props) => {
     return (  
-        <>
+        <div className="wrapper-body"  id="main">
             <Header/>
             <Banniere/>
             <Portfolio/>
@@ -43,7 +43,7 @@ const App = (props) => {
                 </div>
             </div>
             <Footer/>
-        </>
+        </div>
     );
 }
  
