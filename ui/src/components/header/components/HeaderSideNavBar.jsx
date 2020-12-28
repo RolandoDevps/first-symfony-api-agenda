@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 
+// Composant du sidebar du bloc header
 const HeaderSideNavBar = (props) => {
 
-    document.onclick = (event) => {
-        var mySidebar = document.getElementById("mySidebar");
-        // var openNav = document.getElementById("openNav");
-        if(mySidebar != event.target){
-            // alert("hello change");
-            props.handleClickHideSideBar
-        }
-    }
+    // document.onclick = (event) => {
+    //     var mySidebar = document.getElementById("mySidebar");
+    //     if(mySidebar != event.target){
+    //         alert("hello change");
+    //         props.handleClickHideSideBar();
+    //     }
+    // }
 
     return (
         <div className="wrap-side-bar" id="wrap-mySidebar">
             <div id="mySidebar" className="sidebar">
-            {/* <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> */}
+                <span class="closebtn" onClick={props.handleClickHideSideBar}>×</span>
                 <ul className="sidebar-nav">
                     <li className="nav-item">
                         <a className="nav-link" href>

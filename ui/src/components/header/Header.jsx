@@ -5,6 +5,8 @@ import HeaderSearchForm from './components/HeaderSearchForm';
 import HeaderSideNavBar from './components/HeaderSideNavBar';
 import logo from "../../images/logo.png";
 
+
+// Composant principal du bloc header
 const Header = (props) => {
 
     const [showSearchForm, setShowSearchForm]= useState(false);
@@ -39,22 +41,6 @@ const Header = (props) => {
             wrapper_header.classList.remove("sticky");
         }
     };
-
-    // window.onclick = function(event) {
-    //     var mySidebar = document.getElementById("mySidebar");
-    //     var openNav = document.getElementById("openNav");
-    //     var wrap_mySidebar = document.getElementById("wrap-mySidebar");
-
-    //     // if (event.target !== mySidebar && event.target !== openNav) {
-    //     //     wrap_mySidebar.style.display = "none";
-    //     // }
-
-    //     if (mySidebar !== event.target && !(mySidebar.has(event.target).length) && openNav != event.target && !(openNav.has(event.target).length)) {
-    //         if(!(wrap_mySidebar.style.display == "none")){
-    //             wrap_mySidebar.style.display = "none";
-    //         }
-    //     }
-    // }
 
     return ( 
         <div className="wrapper-header" id="wrapper_header">

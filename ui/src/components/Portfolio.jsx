@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// Composant du bloc portfolio
 const Portfolio = (props) => {
     return ( 
         <div className="wrapper-portfolio">

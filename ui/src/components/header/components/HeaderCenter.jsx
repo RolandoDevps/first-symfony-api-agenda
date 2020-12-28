@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Composant affiché au centre du bloc header
 const HeaderCenter = (props) => {
     return ( 
         <div className="col-6 header-center toggle-display-none menu-mobile-display-none">

@@ -135,7 +135,7 @@ ul.social-links a {
 .footer-widget {margin-top: 50px;}
 @media (max-width: 575px) {
     .footer-menu-item{
-        display: none;
+        /* display: none; */
     }
     .footer-widget .title:after {
         content: '\f107';

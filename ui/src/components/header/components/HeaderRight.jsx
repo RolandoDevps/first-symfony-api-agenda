@@ -4,13 +4,8 @@ import search from "../../../images/search.svg";
 import login from "../../../images/avatar.svg";
 import logout from "../../../images/login.svg";
 
+// Composant affiché à droite du bloc header
 const HeaderRight = (props) => {
-
-    // console.log(props.handleClick);
-
-    // const handleClickToShowSearchForm = function() {
-    //     console.log(props.handleClick);
-    // }
 
     return ( 
         <div className="col-4 header-right toggle-display-none">

@@ -1,6 +1,7 @@
 import React from 'react';
 import service2 from "../images/service-2.svg"
 
+// Composant du bloc Technology and inovation
 const Service = (props) => {
     return ( 
         <div className="wrapper-services">

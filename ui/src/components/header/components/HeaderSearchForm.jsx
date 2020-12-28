@@ -2,6 +2,7 @@ import React from 'react';
 import close from "../../../images/close-button.svg";
 import search from "../../../images/search.svg";
 
+// Composant formulaire de recherche du bloc header
 const HeaderSearchForm = (props) => {
     return ( 
         <div className="col-10 header-search toggle-display-flex">

@@ -13,6 +13,8 @@ import bg_animation11 from "../images/bg-ban-an11.png";
 import bg_animation12 from "../images/bg-ban-an12.png";
 import bg_animation13 from "../images/bg-ban-an13.png";
 
+
+// Composant du bloc bannière
 const Banniere = (props) => {
     return ( 
         <div className="wrapper-banniere">

@@ -2,6 +2,7 @@ import React from 'react';
 import product1 from "../images/product1.png"
 import product2 from "../images/product2.png"
 
+// Composant du bloc Featured product
 const Product = () => {
     return ( 
         <>
